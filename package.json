@@ -6,15 +6,9 @@
   "scripts": {
     "win": "npm run clean && npm run temp-win && npx wdio run ./wdio.conf.js",
     "mac": "npm run clean && npm run temp-mac && npx wdio run ./wdio.conf.js",
-    "smoke-win": "npm run clean && npm run temp-win && npx wdio run ./smoke.conf.js",
-    "smoke-mac": "npm run clean && npm run temp-mac && npx wdio run ./smoke.conf.js",
-    "api-win": "npm run clean && npm run temp-win && npx wdio run ./api.conf.js",
-    "api-mac": "npm run clean && npm run temp-mac && npx wdio run ./api.conf.js",
-    "cleanup-win": "npm run clean && npm run temp-win && npx wdio run ./cleanup.conf.js",
-    "cleanup-mac": "npm run clean && npm run temp-mac && npx wdio run ./cleanup.conf.js",
     "report-generate": "allure generate ./temp/allure-results -o ./temp/allure-report",
     "report-open": "allure open ./temp/allure-report",
-    "report-send": "npx babel-node send-email.js",
+    "report-send": "npx babel-node email.js",
     "clean": "rm -rf temp",
     "temp-win": "mkdir temp\\screenshots",
     "temp-mac": "mkdir temp temp/screenshots"

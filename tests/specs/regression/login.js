@@ -1,101 +1,99 @@
+import creds from '../../data/credentials';
+import Home from '../../pages/home.page';
 import Login from '../../pages/login.page';
+import Welcome from '../../pages/welcome.page';
 
 describe('Login', () => {
 
-    describe('App-data', () => {
+    describe('Page design', () => {
 
         before(() => {
-            Login.openPage();
+            Home.openPage();
         });
-
-        it('Page-title-is-correct', () => {
-            Login.pageTitleIsCorrect();
-        });
-
-        it('Page-URL-is-correct', () => {
-            Login.checkURL();
-        });
-
-    });
-
-    describe('Elements-displayed', () => {
 
         it('Logo', () => {
-            Login.logoIsDispalyed();
+            Home.logoIsDispalyed();
         });
 
-        it('Email-field', () => {
-            Login.emailFieldIsDisplayed();
+        it('Heading text', () => {
+            Home.headingIsDisplayed();
         });
 
-        it('Password-field', () => {
-            Login.passwordFieldIsDisplayed();
+        it('Email field', () => {
+            Home.emailFieldIsDisplayed();
         });
 
-        it('Login-button', () => {
-            Login.btnLoginIsDisplayed();
+        it('Password field', () => {
+            Home.passwordFieldIsDisplayed();
         });
 
-        it('Forgot-button', () => {
-            Login.btnForgotIsDisplayed();
+        it('Login button', () => {
+            Home.btnLoginIsDisplayed();
         });
 
-        it('Text-Under-Logo', () => {
-            Login.textUnderLogoIsDisplayed();
+        it('Forgot password button', () => {
+            Home.btnForgotIsDisplayed();
+        });
+
+        it('Create new account button', () => {
+            Home.btnCreateIsDisplayed();
+        });
+
+        it('Celebrity page text', () => {
+            Home.celebrityTextIsDisplayed();
         });
 
     });
 
-    // describe('Elements-values', () => {
+    describe('Element properties', () => {
 
-    //     it('Email-placeholder', () => {
-    //         Login.emailPlaceholder();
-    //     });
+        it('Login button title', () => {
+            Home.checkBtnLoginTitle();
+        });
 
-    //     it('Password-placeholder', () => {
-    //         Login.passwordPlaceholder();
-    //     });
+        it('Login button color', () => {
+            Home.checkBtnLoginColor();
+        });
 
-    //     it('Login-button', () => {
-    //         Login.btnLoginText();
-    //     });
+        it('Login button font size', () => {
+            Home.checkBtnLoginFontSize();
+        });
 
-    //     it('Forgot-button', () => {
-    //         Login.btnForgotText();
-    //     });
+        it('Login button font color', () => {
+            Home.checkBtnLoginFontColor();
+        });
 
-    // });
+        it('Login button width', () => {
+            Home.checkBtnLoginWidth();
+        });
 
-    // describe('Functionality', () => {
+        //---same for other elements---
 
-    //     it('Error-appears-both-fields-are-empty', () => {
-    //         Login.bothFieldsEmptyError();
-    //     });
+    });
 
-    //     it('Error-appears-email-is-empty', () => {
-    //         Login.emptyEmailError();
-    //     });
+    describe('Login form validation', () => {
 
-    //     it('Error-appears-password-is-empty', () => {
-    //         Login.emptyPasswordError();
-    //     });
+        it('Invalid email and any password', () => {
+            Home.setEmail('AAA' + creds.trueData.email);
+            Home.setPassword(creds.trueData.password + '123')
+            Home.clickLoginBtn()
+            Login.notMeLinkIsNotDispalyed()
+        });
 
-    //     it('Error-appears-email-is-incorrect', () => {
-    //         Login.incorrectEmailError();
-    //     });
+        it('Valid email and invalid password', () => {
+            Home.setEmail(creds.trueData.email);
+            Home.setPassword(creds.trueData.password + '123')
+            Home.clickLoginBtn()
+            Login.notMeLinkIsDispalyed()
+        });
 
-    //     it('Error-dissapears-on-input-in-email', () => {
-    //         Login.errorMessageDisappearsOnInputInEmail();
-    //     });
+        it('Valid email and valid password', () => {
+            Home.setEmail(creds.trueData.email);
+            Home.setPassword(creds.trueData.password)
+            Home.clickLoginBtn()
+            Welcome.checkURL()
+        });
 
-    //     it('Error-appears-password-is-incorrect', () => { //Both fields with 'a' value now
-    //         Login.incorrectPasswordError();
-    //     });
-
-    //     it('Error-dissapears-on-input-in-password', () => {
-    //         Login.errorMessageDisappearsOnInPassword();
-    //     });
-
-    // });
+    });
 
 });
