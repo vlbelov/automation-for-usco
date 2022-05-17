@@ -9,7 +9,7 @@
 ## 1. Clone the repo:
 HTTPS:
 ```
-git clone https://github.com/vlbelov/automation-for-usco.git
+git clone https://github.com/vlbelov/automation-for-usko.git
 ```
 ---
 ## 2. Install the modules:
