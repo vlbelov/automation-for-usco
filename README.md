@@ -7,7 +7,6 @@
 
 ---
 ## 1. Clone the repo:
-HTTPS:
 ```
 git clone https://github.com/vlbelov/automation-for-usko.git
 ```
