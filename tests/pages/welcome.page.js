@@ -1,4 +1,5 @@
 import Base from './base.page';
+
 class Welcome extends Base {
 
     constructor() {

@@ -7,6 +7,8 @@
 
 ---
 ## 1. Clone the repo:
+ Select any empty folder in Visual Studio code by ```File``` => ```Open Folder```
+</br> Type in terminal (better use ```Git Bash```)
 ```
 git clone https://github.com/vlbelov/automation-for-usko.git
 ```
@@ -32,8 +34,4 @@ npm run report-generate
 Open the interactive HTML report in a browser:
 ```
 npm run report-open
-```
-Send an email report:
-```
-TO_EMAILS=jdavydova@uskoinc.com npm run report-send
 ```

@@ -1,7 +1,7 @@
 import summary from './temp/allure-report/widgets/summary.json';
 import sgMail from '@sendgrid/mail';
 
-const sendGridKey = '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';
+const sendGridKey = '';
 
 const total = summary.statistic.total;
 const passed = summary.statistic.passed;

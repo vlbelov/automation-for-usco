@@ -2,13 +2,6 @@ import Base from './base.page';
 
 class Login extends Base {
 
-    constructor() {
-        super();
-        this.exp = {
-            
-        };
-    }
-
     get notMeLink() { return $('#not_me_link') }
     get loginForm() { return $('#login_form') }
 
