@@ -66,6 +66,10 @@ describe('Login', () => {
         it('Login button width', () => {
             Home.checkBtnLoginWidth();
         });
+        
+        it('Create button color', () => {
+            Home.checkBtnCreateColor();
+        });
 
         //---same for other elements---
 

@@ -10,7 +10,8 @@ class Home extends Base {
             loginBtnColor: '#1877f2',
             loginBtnFontSize: '20px',
             loginBtnFontColor: '#ffffff',
-            loginBtnWidth: '332px'
+            loginBtnWidth: '332px',
+            createBtnColor: '#42b73a'
         };
     }
 
@@ -85,6 +86,11 @@ class Home extends Base {
     checkBtnLoginWidth() {
         const property = this.btnLogin.getCSSProperty('width')
         expect(property.value).toBe(this.exp.loginBtnWidth)
+    }
+
+    checkBtnCreateColor() {
+        const property = this.btnCreate.getCSSProperty('background-color')
+        expect(property.parsed.hex).toBe(this.exp.createBtnColor)
     }
 
     //Login form validation
