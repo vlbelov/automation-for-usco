@@ -4,6 +4,7 @@
 3. [Python](https://www.python.org/downloads/)
 4. [Java Development Kit](https://www.java.com/en/download/)
 5. Install/Update [Chrome browser](https://www.google.com/chrome/) to the latest version
+6. [VS Code](https://code.visualstudio.com/download)
 
 ---
 ## 1. Clone the repo:
@@ -21,10 +22,16 @@ npm i -g allure-commandline
 
 ---
 ## 3. Run the tests:
-select Mac or Windows script based on your OS
+(Select Mac or Windows script based on your OS)
+</br>```To run regression tests:```
 ```
 npm run win
 npm run mac
+```
+```To run smoke tests:```
+```
+npm run smoke-win
+npm run smoke-mac
 ```
 ---
 ## 4. Generate test report (after a test run):

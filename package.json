@@ -6,6 +6,8 @@
   "scripts": {
     "win": "npm run clean && npm run temp-win && npx wdio run ./wdio.conf.js",
     "mac": "npm run clean && npm run temp-mac && npx wdio run ./wdio.conf.js",
+    "smoke-win": "npm run clean && npm run temp-win && npx wdio run ./smoke.conf.js",
+    "smoke-mac": "npm run clean && npm run temp-mac && npx wdio run ./smoke.conf.js",
     "report-generate": "allure generate ./temp/allure-results -o ./temp/allure-report",
     "report-open": "allure open ./temp/allure-report",
     "report-send": "npx babel-node email.js",
