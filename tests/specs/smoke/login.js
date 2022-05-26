@@ -4,6 +4,10 @@ import Welcome from '../../pages/welcome.page';
 
 describe('Login', () => {
 
+    before(() => {
+        Home.openPage();
+    });
+
     describe('Login form validation', () => {
 
         it('Successful login', () => {
