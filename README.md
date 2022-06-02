@@ -13,7 +13,10 @@
 ```
 git clone https://github.com/vlbelov/automation-for-usko.git
 ```
+Select and open folder of framework ('automation-for-usko') inside your folder by ```File``` => ```Open Folder```
+
 ---
+
 ## 2. Install the modules:
 ```
 npm i
